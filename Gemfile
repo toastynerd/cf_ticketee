@@ -4,9 +4,7 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-group :production do
-	gem 'pg'
-end
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,12 +19,11 @@ group :assets do
 end
 group :development do
 	gem 'rspec-rails', '~> 2.11'
-	gem 'sqlite3'
 end
 
 group :test do
 	gem 'capybara', '1.1.2'
-	gem 'sqlite3'
+	gem 'factory_girl', '2.6.4'
 end
 
 gem 'jquery-rails'
