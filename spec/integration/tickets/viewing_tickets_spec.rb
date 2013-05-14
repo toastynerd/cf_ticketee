@@ -2,9 +2,13 @@ require 'spec_helper'
 
 feature "Viewing Tickets" do
   before do
+    user = Factory(:user)
     textmate_2 = Factory(:project, :name => "TextMate 2")
-    Factory(:ticket, :project => textmate_2,
+    ticket = Factory(:ticket, :project => textmate_2,
       :title => "Make it shiny!", :description => "Gradients, starbursts, oh my!" )
+    ticket.update_attribute(:user, user)
+    ticket.user = user
+    ticket.save
     internet_exlorer = Factory(:project, :name => "Internet Explorer")
     Factory(:ticket, :project => internet_exlorer,
       :title => "Standards compliance", :description => "It isn't a joke")

@@ -18,6 +18,10 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
+  config.before do
+    ActionMailer::Base.deliveries.clear
+  end
+
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -40,4 +44,7 @@ RSpec.configure do |config|
 
   #email_spec helper
   config.include EmailSpec::Helpers
+
+  #get rid of duplicate e-mails for the test user
+
 end

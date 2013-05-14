@@ -1,0 +1,13 @@
+module AuthenticaitonHelpers
+  def sign_in_as!(user)
+    visit '/users/sign_in'
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => "foobar"
+    click_button "Sign in"
+    page.should have_content("Signed in successfully.")
+  end
+end
+
+RSpec.configure do |c|
+  c.include AuthenticaitonHelpers, :type => :request
+end
