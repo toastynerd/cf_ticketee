@@ -18,6 +18,12 @@ RSpec.configure do |config|
   # config.mock_with :mocha
   # config.mock_with :flexmock
   # config.mock_with :rr
+
+  #helper for admin user login
+  config.include Devise::TestHelpers, :type => :controller
+
+
+  #helper for email_helper
   config.before do
     ActionMailer::Base.deliveries.clear
   end
