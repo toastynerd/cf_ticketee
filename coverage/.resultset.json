@@ -18,6 +18,15 @@
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        1,
+        1,
+        16,
+        15,
+        6,
+        6,
+        null,
+        null,
         null
       ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/helpers/application_helper.rb": [
@@ -35,12 +44,27 @@
         null,
         null
       ],
+      "/home/toasty/Documents/programming/code_fellows/ticketee/app/helpers/admin/users_helper.rb": [
+        1,
+        null
+      ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/helpers/projects_helper.rb": [
         1,
         null
       ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/helpers/tickets_helper.rb": [
         1,
+        null
+      ],
+      "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/admin/base_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/admin/users_controller.rb": [
+        1,
+        1,
+        null,
         null
       ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/projects_controller.rb": [
@@ -95,14 +119,6 @@
         null,
         1,
         1,
-        null,
-        null,
-        1,
-        14,
-        14,
-        5,
-        5,
-        null,
         null,
         null
       ],
@@ -182,6 +198,6 @@
         null
       ]
     },
-    "timestamp": 1368662652
+    "timestamp": 1368666041
   }
 }
