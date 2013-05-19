@@ -14,7 +14,7 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-19T12:33:57-07:00">2013-05-19T12:33:57-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-05-19T12:50:52-07:00">2013-05-19T12:50:52-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.54
+         5.79
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>16</b> files in total.
-    <b>150</b> relevant lines. 
-    <span class="green"><b>150</b> lines covered</span> and
+    <b>152</b> relevant lines. 
+    <span class="green"><b>152</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -103,9 +103,9 @@
       <tr>
         <td class="strong"><a href="#b54d60c12fc047a06f8f5767bce36242a3cc521d" class="src_link" title="app/controllers/tickets_controller.rb">app/controllers/tickets_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>54</td>
-        <td>31</td>
-        <td>31</td>
+        <td>57</td>
+        <td>33</td>
+        <td>33</td>
         <td>0</td>
         <td>2.2</td>
       </tr>
@@ -187,7 +187,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>13.9</td>
+        <td>17.9</td>
       </tr>
       
       <tr>
@@ -230,8 +230,8 @@
   <a name="Controllers"></a>
   <div>
     <b>7</b> files in total.
-    <b>114</b> relevant lines. 
-    <span class="green"><b>114</b> lines covered</span> and
+    <b>116</b> relevant lines. 
+    <span class="green"><b>116</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -301,9 +301,9 @@
       <tr>
         <td class="strong"><a href="#b54d60c12fc047a06f8f5767bce36242a3cc521d" class="src_link" title="app/controllers/tickets_controller.rb">app/controllers/tickets_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>54</td>
-        <td>31</td>
-        <td>31</td>
+        <td>57</td>
+        <td>33</td>
+        <td>33</td>
         <td>0</td>
         <td>2.2</td>
       </tr>
@@ -330,7 +330,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.4
+         6.4
        </span>
     </span> hits/line)
   </h2>
@@ -372,7 +372,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>13.9</td>
+        <td>17.9</td>
       </tr>
       
       <tr>
@@ -1561,8 +1561,8 @@
     <h3>app/controllers/tickets_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>31</b> relevant lines. 
-      <span class="green"><b>31</b> lines covered</span> and
+      <b>33</b> relevant lines. 
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1579,7 +1579,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  before_filter :authenticate_user!, :except =&gt; [:index, :show]</code>
+          <code class="ruby">  before_filter :authenticate_user!</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
@@ -1852,43 +1852,61 @@
           <code class="ruby">  def find_project</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="48">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="18" data-linenumber="48">
+          <span class="hits">18</span>
           
-          <code class="ruby">    @project = Project.find(params[:project_id])</code>
+          <code class="ruby">    @project = Project.for(current_user).find(params[:project_id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    rescue ActiveRecord::RecordNotFound</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    flash[:alert] = &quot;The project you were looking for could not be found.&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">  def find_ticket</code>
+          <code class="ruby">    redirect_to root_path</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="52">
-          <span class="hits">11</span>
-          
-          <code class="ruby">    @ticket = @project.tickets.find(params[:id])</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def find_ticket</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="55">
+          <span class="hits">11</span>
+          
+          <code class="ruby">    @ticket = @project.tickets.find(params[:id])</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">end</code>
@@ -2266,8 +2284,8 @@
           <code class="ruby">  def self.viewable_by(user)</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="9">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="55" data-linenumber="9">
+          <span class="hits">55</span>
           
           <code class="ruby">    joins(:permissions).where(:permissions =&gt; {:action =&gt; &quot;view&quot;,</code>
         </li>
@@ -2290,8 +2308,8 @@
           <code class="ruby">  def self.for(user)</code>
         </li>
       
-        <li class="covered" data-hits="81" data-linenumber="13">
-          <span class="hits">81</span>
+        <li class="covered" data-hits="99" data-linenumber="13">
+          <span class="hits">99</span>
           
           <code class="ruby">    user.admin? ? Project : Project.viewable_by(user)</code>
         </li>
