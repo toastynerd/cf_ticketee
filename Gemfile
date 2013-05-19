@@ -28,10 +28,16 @@ group :test do
   gem 'email_spec', '1.2.1'
 end
 
+# group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-debugger'
+  gem 'pry-doc'
+  gem 'launchy'
+# end
+
 gem 'devise', '2.1.0'
+gem 'cancan', '1.6.7'
 gem 'jquery-rails'
-gem 'execjs'
-gem 'therubyracer'
 gem 'dynamic_form', '1.1.4'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

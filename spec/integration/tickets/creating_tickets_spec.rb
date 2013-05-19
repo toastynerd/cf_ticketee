@@ -4,8 +4,10 @@ feature "Creating Tickets" do
     before do
     project = Factory(:project, :name => "Internet Explorer")
     user = Factory(:confirmed_user, :email => "ticketee@example.com")
-    define_permission!(user, "view", project) 
     sign_in_as!(user)
+
+    define_permission!(user, "view", project) 
+    define_permission!(user, "create tickets", project )
 
     visit '/'
     click_link "Internet Explorer"
