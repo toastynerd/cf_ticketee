@@ -60,6 +60,10 @@
         1,
         null
       ],
+      "/home/toasty/Documents/programming/code_fellows/ticketee/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/admin/base_controller.rb": [
         1,
         1,
@@ -206,6 +210,16 @@
         null,
         null
       ],
+      "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/registrations_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/tickets_controller.rb": [
         1,
         1,
@@ -273,6 +287,12 @@
         null,
         null
       ],
+      "/home/toasty/Documents/programming/code_fellows/ticketee/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/toasty/Documents/programming/code_fellows/ticketee/app/models/permission.rb": [
         1,
         1,
@@ -281,6 +301,6 @@
         null
       ]
     },
-    "timestamp": 1368990335
+    "timestamp": 1368992037
   }
 }
