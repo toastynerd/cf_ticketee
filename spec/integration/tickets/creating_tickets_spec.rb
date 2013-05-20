@@ -10,7 +10,7 @@ feature "Creating Tickets" do
     define_permission!(user, "create tickets", project )
 
     visit '/'
-    click_link "Internet Explorer"
+   click_link "Internet Explorer"
     click_link "New Ticket"
     within("h2") {page.should have_content("New Ticket")}
   end

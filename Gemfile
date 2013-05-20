@@ -28,12 +28,12 @@ group :test do
   gem 'email_spec', '1.2.1'
 end
 
-# group :development, :test do
+group :development, :test do
   gem 'pry-rails'
   gem 'pry-debugger'
   gem 'pry-doc'
   gem 'launchy'
-# end
+end
 
 gem 'devise', '2.1.0'
 gem 'cancan', '1.6.7'
