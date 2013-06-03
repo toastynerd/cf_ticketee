@@ -26,6 +26,7 @@ group :test do
 	gem 'factory_girl', '2.6.4'
   gem 'simplecov',:require => false
   gem 'email_spec', '1.2.1'
+  gem 'cucumber'
 end
 
 group :development, :test do
@@ -37,6 +38,9 @@ end
 
 gem 'devise', '2.1.0'
 gem 'cancan', '1.6.7'
+
+gem 'paperclip', '2.7.0'
+
 gem 'jquery-rails'
 gem 'dynamic_form', '1.1.4'
 # To use ActiveModel has_secure_password
