@@ -26,7 +26,7 @@ group :test do
 	gem 'factory_girl', '2.6.4'
   gem 'simplecov',:require => false
   gem 'email_spec', '1.2.1'
-  gem 'cucumber'
+  gem 'database_cleaner', '0.7.2'
 end
 
 group :development, :test do
