@@ -1,4 +1,4 @@
-require 'spec_helper'
+Crequire 'spec_helper'
 
 feature "Assigning permissions" do
   let!(:admin) {Factory(:admin_user)}
